@@ -1,63 +1,52 @@
 {
-  "version": 2,
-  "builds": [
+  "rewrites": [
     {
-      "src": "**/*",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/disney2/(.*)",
-      "dest": "/disney2/$1"
+      "source": "/disney2",
+      "destination": "/disney2/index.html"
     },
     {
-      "src": "/landingYas2/(.*)",
-      "dest": "/landingYas2/$1"
+      "source": "/disney2/:path*",
+      "destination": "/disney2/:path*"
     },
     {
-      "src": "/leaarn/(.*)",
-      "dest": "/leaarn/$1"
+      "source": "/landingYas2",
+      "destination": "/landingYas2/index.html"
     },
     {
-      "src": "/makah1/(.*)",
-      "dest": "/makah1/$1"
+      "source": "/landingYas2/:path*",
+      "destination": "/landingYas2/:path*"
     },
     {
-      "src": "/umravip1/(.*)",
-      "dest": "/umravip1/$1"
+      "source": "/leaarn",
+      "destination": "/leaarn/index.html"
     },
     {
-      "src": "/vid/(.*)",
-      "dest": "/vid/$1"
+      "source": "/leaarn/:path*",
+      "destination": "/leaarn/:path*"
     },
     {
-      "src": "/(.*\\.(jpg|jpeg|png|gif|svg|ico|css|js|mp4|webp|avif|heic))",
-      "dest": "/$1"
+      "source": "/makah1",
+      "destination": "/makah1/index.html"
     },
     {
-      "src": "/disney2",
-      "dest": "/disney2/index.html"
+      "source": "/makah1/:path*",
+      "destination": "/makah1/:path*"
     },
     {
-      "src": "/landingYas2",
-      "dest": "/landingYas2/index.html"
+      "source": "/umravip1",
+      "destination": "/umravip1/index.html"
     },
     {
-      "src": "/leaarn",
-      "dest": "/leaarn/index.html"
+      "source": "/umravip1/:path*",
+      "destination": "/umravip1/:path*"
     },
     {
-      "src": "/makah1",
-      "dest": "/makah1/index.html"
+      "source": "/vid/:path*",
+      "destination": "/vid/:path*"
     },
     {
-      "src": "/umravip1",
-      "dest": "/umravip1/index.html"
-    },
-    {
-      "src": "/",
-      "dest": "/leaarn/index.html"
+      "source": "/:path*",
+      "destination": "/leaarn/index.html"
     }
   ],
   "headers": [
@@ -75,19 +64,6 @@
         {
           "key": "X-XSS-Protection",
           "value": "1; mode=block"
-        }
-      ]
-    },
-    {
-      "source": "/(.*\\.(mp4|webm|ogg))",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "video/mp4"
-        },
-        {
-          "key": "Accept-Ranges",
-          "value": "bytes"
         }
       ]
     }
