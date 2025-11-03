@@ -5,48 +5,20 @@
       "destination": "/disney2/index.html"
     },
     {
-      "source": "/disney2/:path*",
-      "destination": "/disney2/:path*"
-    },
-    {
       "source": "/landingYas2",
       "destination": "/landingYas2/index.html"
-    },
-    {
-      "source": "/landingYas2/:path*",
-      "destination": "/landingYas2/:path*"
     },
     {
       "source": "/leaarn",
       "destination": "/leaarn/index.html"
     },
     {
-      "source": "/leaarn/:path*",
-      "destination": "/leaarn/:path*"
-    },
-    {
       "source": "/makah1",
       "destination": "/makah1/index.html"
     },
     {
-      "source": "/makah1/:path*",
-      "destination": "/makah1/:path*"
-    },
-    {
       "source": "/umravip1",
       "destination": "/umravip1/index.html"
-    },
-    {
-      "source": "/umravip1/:path*",
-      "destination": "/umravip1/:path*"
-    },
-    {
-      "source": "/vid/:path*",
-      "destination": "/vid/:path*"
-    },
-    {
-      "source": "/:path*",
-      "destination": "/leaarn/index.html"
     }
   ],
   "headers": [
