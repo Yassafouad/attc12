@@ -1353,40 +1353,8 @@ footer a span[dir="ltr"],
     padding-right: 0;
 }
 
-.footer-link::before {
-    content: '→';
-    position: absolute;
-    right: -15px;
-    opacity: 0;
-    transition: all 0.3s ease;
-}
-
-[dir="rtl"] .footer-link::before {
-    content: '←';
-    right: auto;
-    left: -15px;
-}
-
 .footer-link:hover {
     color: var(--primary-yellow);
-    padding-right: 20px;
-    transform: translateX(-5px);
-}
-
-[dir="rtl"] .footer-link:hover {
-    padding-right: 0;
-    padding-left: 20px;
-    transform: translateX(5px);
-}
-
-.footer-link:hover::before {
-    opacity: 1;
-    right: 0;
-}
-
-[dir="rtl"] .footer-link:hover::before {
-    right: auto;
-    left: 0;
 }
 
 .footer-contact-info {

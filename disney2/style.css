@@ -1175,24 +1175,13 @@ body[dir="ltr"] .footer-logo .logo-content {
     font-weight: 500;
     opacity: 0.9;
     position: relative;
-    padding-left: 1rem;
-}
-
-.footer-nav a::before {
-    content: '→';
-    position: absolute;
-    left: 0;
-    transition: var(--transition);
+    padding-left: 0;
 }
 
 .footer-nav a:hover {
     opacity: 1;
     transform: translateX(5px);
     color: #00B4E6;
-}
-
-.footer-nav a:hover::before {
-    transform: translateX(-5px);
 }
 
 .footer-hotels-list {
