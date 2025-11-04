@@ -17,6 +17,9 @@
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <style>
         * {
             font-family: 'Tajawal', sans-serif;
@@ -84,6 +87,19 @@
         .hero-content {
             position: relative;
             z-index: 2;
+        }
+        
+        /* Hero Badge Alignment Fix */
+        .hero-section .inline-block span[data-lang-key="hero-badge"] {
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            vertical-align: middle !important;
+            line-height: 1.5 !important;
+        }
+        
+        .hero-section .inline-block span[data-lang-key="hero-badge"] * {
+            vertical-align: middle !important;
         }
         
         /* Floating Particles */
@@ -400,27 +416,224 @@
             50% { transform: translate(-50px, -50px); }
         }
         
-        /* Footer with same background as motivation section */
-        footer.footer-gradient {
-            background: linear-gradient(135deg, #213886 0%, #2A4AA0 50%, #213886 100%);
+        /* Unified Footer Styles */
+        footer.footer {
+            background: #213999;
+            color: #ffffff;
+            padding: 3rem 0 1.5rem;
             position: relative;
             overflow: hidden;
-        }
-        
-        footer.footer-gradient::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
             width: 100%;
-            height: 100%;
-            background: radial-gradient(circle, rgba(245, 166, 35, 0.15) 0%, transparent 70%);
-            animation: float 8s ease-in-out infinite;
+            margin-top: 4rem;
         }
         
-        footer.footer-gradient > * {
+        footer.footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
             position: relative;
             z-index: 1;
+        }
+        
+        @media (min-width: 768px) {
+            .footer-content {
+                grid-template-columns: 2fr 1fr 1fr 1.5fr;
+                gap: 2.5rem;
+            }
+            
+            footer.footer .container {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            footer.footer {
+                padding: 2rem 0 1.5rem;
+            }
+            
+            footer.footer .container {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+            
+            .footer-content {
+                gap: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+            
+            .footer-section {
+                padding: 0;
+            }
+        }
+        
+        /* Footer Direction Support */
+        html[dir="rtl"] footer.footer,
+        body[dir="rtl"] footer.footer {
+            direction: rtl;
+        }
+        
+        html[dir="ltr"] footer.footer,
+        body[dir="ltr"] footer.footer {
+            direction: ltr;
+        }
+        
+        .footer-section {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .footer-logo-img {
+            height: 50px;
+            width: auto;
+            margin-bottom: 1rem;
+            filter: brightness(1.1);
+        }
+        
+        .footer-tagline {
+            font-size: 0.95rem;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        
+        .footer-heading {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .footer-list a {
+            color: #ffffff;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .footer-list a:hover {
+            color: #FFD700 !important;
+            padding-right: 8px;
+            transform: translateX(-3px);
+            font-weight: 500;
+        }
+        
+        [dir="ltr"] .footer-list a:hover {
+            padding-right: 0;
+            padding-left: 8px;
+            transform: translateX(3px);
+        }
+        
+        .footer .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .footer .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: #ffffff;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            margin-bottom: 0.5rem;
+            padding: 0;
+            background: none;
+            border: none;
+            box-shadow: none;
+            border-radius: 0;
+        }
+        
+        .footer .contact-item:hover {
+            color: #FFD700;
+            transform: translateX(-5px);
+            background: none;
+            border: none;
+            box-shadow: none;
+        }
+        
+        [dir="ltr"] .footer .contact-item:hover {
+            transform: translateX(5px);
+        }
+        
+        .footer .contact-item i.contact-icon,
+        .footer .contact-icon {
+            color: #FFD700;
+            font-size: 1.25rem;
+            width: 24px;
+            min-width: 24px;
+            text-align: center;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            filter: none;
+        }
+        
+        .footer .contact-item a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer .contact-item a:hover {
+            color: #FFD700;
+        }
+        
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+        }
+        
+        .copyright {
+            font-size: 0.875rem;
+            color: #ffffff;
+        }
+        
+        .copyright-link {
+            color: #ffffff;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .copyright-link:hover {
+            color: #FFD700;
+        }
+        
+        /* Footer Language Visibility */
+        html[lang="ar"] .footer .lang-en-text {
+            display: none !important;
+        }
+        
+        html[lang="en"] .footer .lang-ar-text {
+            display: none !important;
+        }
+        
+        html[lang="ar"] .footer .lang-ar-text {
+            display: inline !important;
+        }
+        
+        html[lang="en"] .footer .lang-en-text {
+            display: inline !important;
         }
         
         /* Mobile Menu */
@@ -571,12 +784,19 @@
             .hero-section .inline-block span[data-lang-key="hero-badge"] {
                 font-size: 0.75rem !important;
                 padding: 0.5rem 1rem !important;
-                line-height: 1.4 !important;
-                display: inline-block;
+                line-height: 1.6 !important;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
                 white-space: normal;
                 max-width: 90vw;
                 text-align: center;
                 word-wrap: break-word;
+                vertical-align: middle;
+            }
+            
+            .hero-section .inline-block span[data-lang-key="hero-badge"] * {
+                vertical-align: middle;
             }
             
             .motivation-star {
@@ -773,7 +993,7 @@
             <div data-aos="fade-down" data-aos-duration="1000">
                 <div class="inline-block mb-6">
                     <span class="bg-white/20 backdrop-blur-md px-6 py-3 rounded-full text-sm font-bold border border-white/30" data-lang-key="hero-badge">
-                        🌟 حصري بالتعاون مع جامعة أم القرى
+                        🌟 حصرى بالتعاون مع جامعة أم القرى
                     </span>
                 </div>
             </div>
@@ -1435,124 +1655,98 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer-gradient text-white py-16">
-        <div class="container mx-auto px-6">
-            <!-- Top Section -->
-            <div class="grid md:grid-cols-4 gap-12 mb-12" id="footer-grid">
-                <!-- Company Info -->
-                <div class="footer-col-1">
-                    <div class="mb-6">
-                        <img src="foterlogo-removebg-preview.png" alt="ATTC - وكالة الأهرام للسفر والسياحة" class="h-12 w-auto">
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section footer-about">
+                    <div class="footer-brand">
+                        <img src="foterlogo-removebg-preview.png" alt="ATTC - الأهرام للسفر والسياحة" class="footer-logo-img">
                     </div>
-                    <h3 class="text-xl font-black mb-4 text-[#F7A716]" data-lang-key="footer-company">وكالة الأهرام للسفر والسياحة</h3>
-                    <p class="text-white leading-relaxed mb-4" data-lang-key="footer-description">
-                        رائدة في تقديم برامج تعليم اللغة العربية بالتعاون مع جامعة أم القرى في مكة المكرمة
+                    <p class="footer-tagline">
+                        <span class="lang-ar-text">رائدة في تقديم برامج تعليم اللغة العربية بالتعاون مع جامعة أم القرى في مكة المكرمة</span>
+                        <span class="lang-en-text">Leader in providing Arabic language education programs in collaboration with Umm Al-Qura University in Makkah</span>
                     </p>
                 </div>
                 
-                <!-- Quick Links -->
-                <div class="footer-col-2">
-                    <h3 class="text-xl font-black mb-6 text-[#F7A716]" data-lang-key="footer-links">روابط سريعة</h3>
-                    <ul class="space-y-3">
-                        <li>
-                            <a href="#hero" class="text-white hover:text-[#F7A716] transition-colors flex items-center gap-2">
-                                <span data-lang-key="nav-home">الرئيسية</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#features" class="text-white hover:text-[#F7A716] transition-colors flex items-center gap-2">
-                                <span data-lang-key="nav-features">المميزات</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#journey" class="text-white hover:text-[#F7A716] transition-colors flex items-center gap-2">
-                                <span data-lang-key="nav-journey">رحلة المتعلم</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#pricing" class="text-white hover:text-[#F7A716] transition-colors flex items-center gap-2">
-                                <span data-lang-key="nav-pricing">الأسعار</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#contact" class="text-white hover:text-[#F7A716] transition-colors flex items-center gap-2">
-                                <span data-lang-key="contact-title">تواصل معنا</span>
-                            </a>
-                        </li>
+                <div class="footer-section footer-quick-links">
+                    <h4 class="footer-heading">
+                        <span class="lang-ar-text">روابط سريعة</span>
+                        <span class="lang-en-text">Quick Links</span>
+                    </h4>
+                    <ul class="footer-list">
+                        <li><a href="#hero">
+                            <span class="lang-ar-text">الرئيسية</span>
+                            <span class="lang-en-text">Home</span>
+                        </a></li>
+                        <li><a href="#features">
+                            <span class="lang-ar-text">المميزات</span>
+                            <span class="lang-en-text">Features</span>
+                        </a></li>
+                        <li><a href="#journey">
+                            <span class="lang-ar-text">الرحلة</span>
+                            <span class="lang-en-text">Journey</span>
+                        </a></li>
+                        <li><a href="#pricing">
+                            <span class="lang-ar-text">الأسعار</span>
+                            <span class="lang-en-text">Pricing</span>
+                        </a></li>
+                        <li><a href="#contact">
+                            <span class="lang-ar-text">تواصل معنا</span>
+                            <span class="lang-en-text">Contact</span>
+                        </a></li>
                     </ul>
                 </div>
                 
-                <!-- Our Other Pages -->
-                <div class="footer-col-3">
-                    <h3 class="text-xl font-black mb-6 text-[#F7A716]" data-lang-key="footer-other-pages">صفحاتنا الأخرى</h3>
-                    <ul class="space-y-3">
-                        <li>
-                            <a href="../makah1/index.html" class="text-white hover:text-[#F7A716] transition-colors flex items-center gap-2">
-                                <span data-lang-key="nav-makkah">مكة المكرمة</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../umravip1/index.html" class="text-white hover:text-[#F7A716] transition-colors flex items-center gap-2">
-                                <span data-lang-key="nav-umrah">عمرة VVIP</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../index.html" class="text-white hover:text-[#F7A716] transition-colors flex items-center gap-2">
-                                <span data-lang-key="nav-yas">جزيرة ياس</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../disney2/index.html" class="text-white hover:text-[#F7A716] transition-colors flex items-center gap-2">
-                                <span data-lang-key="nav-disney">ديزني لاند باريس</span>
-                            </a>
-                        </li>
+                <div class="footer-section footer-other-pages">
+                    <h4 class="footer-heading">
+                        <span class="lang-ar-text">صفحاتنا الأخرى</span>
+                        <span class="lang-en-text">Our Other Pages</span>
+                    </h4>
+                    <ul class="footer-list">
+                        <li><a href="../index.html">
+                            <span class="lang-ar-text">جزيرة ياس</span>
+                            <span class="lang-en-text">Yas Island</span>
+                        </a></li>
+                        <li><a href="../makah1/index.html">
+                            <span class="lang-ar-text">مكة المكرمة</span>
+                            <span class="lang-en-text">Makkah</span>
+                        </a></li>
+                        <li><a href="../umravip1/index.html">
+                            <span class="lang-ar-text">عمرة VVIP</span>
+                            <span class="lang-en-text">Umrah VVIP</span>
+                        </a></li>
+                        <li><a href="../disney2/index.html">
+                            <span class="lang-ar-text">ديزني لاند باريس</span>
+                            <span class="lang-en-text">Disneyland Paris</span>
+                        </a></li>
                     </ul>
                 </div>
                 
-                <!-- Contact Info -->
-                <div class="footer-col-4">
-                    <h3 class="text-xl font-black mb-6 text-[#F7A716]" data-lang-key="footer-contact">تواصل معنا</h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-start gap-3 text-white">
-                            <span class="text-[#F7A716] text-xl">📞</span>
-                            <div>
-                                <a href="tel:+966920019190" class="hover:text-[#F7A716] transition-colors" dir="ltr">
-                                    +966920019190
-                                </a>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-3 text-white">
-                            <span class="text-[#F7A716] text-xl">📧</span>
-                            <div>
-                                <a href="mailto:CC@ATTC.SA" class="hover:text-[#F7A716] transition-colors break-all">
-                                    CC@ATTC.SA
-                                </a>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-3 text-white">
-                            <span class="text-[#F7A716] text-xl">📍</span>
-                            <div data-lang-key="contact-location-text">المملكة العربية السعودية</div>
-                        </li>
-                    </ul>
-                    
-                    <!-- WhatsApp Button -->
-                    <a href="https://wa.me/966920019190" target="_blank" class="mt-6 inline-block bg-gradient-to-r from-[#25D366] to-[#128C7E] text-white px-6 py-3 rounded-xl font-bold hover:shadow-xl transition-all" data-lang-key="footer-whatsapp">
-                        💬 تواصل عبر واتساب
-                    </a>
+                <div class="footer-section footer-contact">
+                    <h4 class="footer-heading">
+                        <span class="lang-ar-text">معلومات التواصل</span>
+                        <span class="lang-en-text">Contact Information</span>
+                    </h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone contact-icon"></i>
+                            <a href="tel:+966920019190" dir="ltr">+966 920 019 190</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope contact-icon"></i>
+                            <a href="mailto:CC@ATTC.SA">CC@ATTC.SA</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             
-            <!-- Divider -->
-            <div class="border-t border-white/20 my-8"></div>
-            
-            <!-- Bottom Section -->
-            <div class="flex flex-col md:flex-row items-center justify-center gap-6">
-                <!-- Copyright -->
-                <div class="text-center">
-                    <p id="footer-copyright" class="text-white">
-                        <span data-lang-key="footer-copyright">© 2025</span> <span class="text-white font-bold" data-lang-key="footer-company">وكالة الأهرام للسفر والسياحة</span> <span data-lang-key="footer-rights">- جميع الحقوق محفوظة</span>
-                    </p>
-                </div>
+            <div class="footer-bottom">
+                <p class="copyright">
+                    <a href="https://www.attc.sa" target="_blank" rel="noopener" class="copyright-link">
+                        <span class="lang-ar-text">ATTC</span>
+                        <span class="lang-en-text">ATTC</span>
+                    </a>
+                </p>
             </div>
         </div>
     </footer>
@@ -1962,6 +2156,35 @@
         // Current language (default: Arabic)
         let currentLang = localStorage.getItem('preferred-language') || 'ar';
         
+        // Update footer language visibility
+        function updateFooterLanguage(lang) {
+            const footer = document.querySelector('.footer');
+            if (!footer) return;
+            
+            const arTexts = footer.querySelectorAll('.lang-ar-text');
+            const enTexts = footer.querySelectorAll('.lang-en-text');
+            
+            if (lang === 'ar') {
+                arTexts.forEach(el => {
+                    el.style.setProperty('display', 'inline', 'important');
+                });
+                enTexts.forEach(el => {
+                    el.style.setProperty('display', 'none', 'important');
+                });
+            } else {
+                arTexts.forEach(el => {
+                    el.style.setProperty('display', 'none', 'important');
+                });
+                enTexts.forEach(el => {
+                    el.style.setProperty('display', 'inline', 'important');
+                });
+            }
+            
+            // Update footer direction
+            footer.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+            document.body.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+        }
+        
         // Switch language function
         function switchLanguage(lang) {
             currentLang = lang;
@@ -1970,6 +2193,7 @@
             // Update HTML attributes
             document.documentElement.setAttribute('lang', lang);
             document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+            document.body.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
             
             // Update all elements with data-lang-key
             document.querySelectorAll('[data-lang-key]').forEach(element => {
@@ -1983,6 +2207,9 @@
             
             // Update language buttons
             updateLanguageButtons(lang);
+            
+            // Update footer language
+            updateFooterLanguage(lang);
             
             // Update specific elements with complex structure (need to preserve HTML)
             updateComplexElements(lang);
@@ -2161,8 +2388,13 @@
         }
         
         // Initialize language on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            updateFooterLanguage(currentLang);
+        });
+        
         window.addEventListener('load', function() {
             switchLanguage(currentLang);
+            updateFooterLanguage(currentLang);
         });
     </script>
 </body>

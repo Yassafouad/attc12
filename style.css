@@ -2414,113 +2414,151 @@ body.lang-ar .inclusions-list li:hover {
 
 /* ========== FOOTER ========== */
 .footer {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 250, 252, 0.95) 100%);
-    color: var(--darker-gray);
-    padding: var(--spacing-2xl) 0 var(--spacing-lg);
+    background: #213999;
+    color: #ffffff;
+    padding: 3rem 0 1.5rem;
     position: relative;
     overflow: hidden;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.footer::before {
-    content: '';
-    position: absolute;
-    top: -150px;
-    left: -100px;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, rgba(249, 184, 66, 0.03) 0%, transparent 70%);
-    border-radius: 50%;
-}
-
+.footer::before,
 .footer::after {
-    content: '';
-    position: absolute;
-    bottom: -100px;
-    right: -150px;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(247, 167, 22, 0.04) 0%, transparent 70%);
-    border-radius: 50%;
+    display: none;
+}
+
+.footer .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }
 
 .footer-content {
     display: grid;
     grid-template-columns: 1fr;
-    gap: var(--spacing-lg);
-    margin-bottom: var(--spacing-xl);
+    gap: 2rem;
+    margin-bottom: 2rem;
     position: relative;
     z-index: 1;
 }
 
 @media (min-width: 768px) {
     .footer-content {
-        grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
-        gap: var(--spacing-md);
+        grid-template-columns: 2fr 1fr 1fr 1.5fr;
+        gap: 2.5rem;
+    }
+    
+    .footer .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 }
 
-.footer-logo {
-    height: 45px;
+@media (max-width: 767px) {
+    .footer {
+        padding: 2rem 0 1.5rem;
+    }
+    
+    .footer .container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    
+    .footer-content {
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .footer-section {
+        padding: 0;
+    }
+}
+
+/* Footer Direction Support */
+html[dir="rtl"] .footer,
+body[dir="rtl"] .footer {
+    direction: rtl;
+}
+
+html[dir="ltr"] .footer,
+body[dir="ltr"] .footer {
+    direction: ltr;
+}
+
+.footer-logo-img {
+    height: 50px;
     width: auto;
-    margin-bottom: var(--spacing-sm);
-    /* Logo already has correct colors */
+    margin-bottom: 1rem;
+    filter: brightness(1.1);
 }
 
 .footer-tagline {
-    font-size: var(--font-size-sm);
-    color: var(--gray);
-    margin-bottom: var(--spacing-md);
+    font-size: 0.95rem;
+    color: #ffffff;
+    line-height: 1.6;
 }
 
-.contact-info {
+.footer .contact-info {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-md);
     margin-top: var(--spacing-md);
 }
 
-.contact-item {
+.footer .contact-item {
     display: flex;
     align-items: center;
     gap: var(--spacing-sm);
-    color: var(--gray);
-    font-size: var(--font-size-base);
-    transition: all var(--transition-base);
+    color: #ffffff;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    margin-bottom: var(--spacing-sm);
+    padding: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
 }
 
-.contact-item:hover {
-    color: #F7A716;
+.footer .contact-item:hover {
+    color: #FFD700;
+    transform: translateX(-5px);
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+[dir="ltr"] .footer .contact-item:hover {
     transform: translateX(5px);
 }
 
-body.lang-ar .contact-item:hover {
-    transform: translateX(-5px);
-}
-
-.contact-item i {
-    color: rgba(249, 184, 66, 0.8);
-    font-size: var(--font-size-lg);
-    width: 20px;
+.footer .contact-item i.contact-icon,
+.footer .contact-icon {
+    color: #FFD700;
+    font-size: 1.25rem;
+    width: 24px;
+    min-width: 24px;
     text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    filter: none;
 }
 
-.contact-item a {
-    color: inherit;
+.footer .contact-item a {
+    color: #ffffff;
     text-decoration: none;
-    transition: color var(--transition-base);
+    transition: color 0.3s ease;
 }
 
-.contact-item a:hover {
-    color: rgba(249, 184, 66, 1);
-    text-decoration: underline;
+.footer .contact-item a:hover {
+    color: #FFD700;
 }
 
 .footer-heading {
-    font-size: var(--font-size-base);
+    font-size: 1rem;
     font-weight: 700;
-    margin-bottom: var(--spacing-sm);
-    color: var(--black);
+    color: #ffffff;
+    margin-bottom: 0.5rem;
 }
 
 .footer-links ul,
@@ -2535,8 +2573,8 @@ body.lang-ar .contact-item:hover {
 
 .footer-links a,
 .footer-section a {
-    color: var(--gray);
-    font-size: var(--font-size-base);
+    color: #ffffff;
+    font-size: 0.95rem;
     text-decoration: none;
     transition: all 0.3s ease;
     display: inline-block;
@@ -2544,17 +2582,17 @@ body.lang-ar .contact-item:hover {
 
 .footer-links a:hover,
 .footer-section a:hover {
-    color: var(--primary-color) !important;
-    padding-left: 8px;
-    transform: translateX(3px);
+    color: #FFD700 !important;
+    padding-right: 8px;
+    transform: translateX(-3px);
     font-weight: 500;
 }
 
-body.lang-ar .footer-links a:hover,
-body.lang-ar .footer-section a:hover {
-    padding-left: 0;
-    padding-right: 8px;
-    transform: translateX(-3px);
+[dir="ltr"] .footer-links a:hover,
+[dir="ltr"] .footer-section a:hover {
+    padding-right: 0;
+    padding-left: 8px;
+    transform: translateX(3px);
 }
 
 /* Hover effect for links inside span elements */
@@ -2574,7 +2612,8 @@ body.lang-ar .footer-section a:hover {
 
 .footer-links li a,
 .footer-section li a {
-    color: var(--gray);
+    color: #ffffff;
+    font-size: 0.95rem;
     transition: all 0.3s ease;
     display: inline-block;
     position: relative;
@@ -2583,17 +2622,17 @@ body.lang-ar .footer-section a:hover {
 
 .footer-links li a:hover,
 .footer-section li a:hover {
-    color: var(--primary-color) !important;
-    padding-left: 8px;
-    transform: translateX(3px);
+    color: #FFD700 !important;
+    padding-right: 8px;
+    transform: translateX(-3px);
     font-weight: 500;
 }
 
-body.lang-ar .footer-links li a:hover,
-body.lang-ar .footer-section li a:hover {
-    padding-left: 0;
-    padding-right: 8px;
-    transform: translateX(-3px);
+[dir="ltr"] .footer-links li a:hover,
+[dir="ltr"] .footer-section li a:hover {
+    padding-right: 0;
+    padding-left: 8px;
+    transform: translateX(3px);
 }
 
 .app-store-container {
@@ -2695,23 +2734,24 @@ body.lang-ar .footer-section li a:hover {
 }
 
 .footer-bottom {
-    padding-top: var(--spacing-2xl);
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
     text-align: center;
 }
 
 .copyright {
-    font-size: var(--font-size-sm);
-    color: var(--gray);
+    font-size: 0.875rem;
+    color: #ffffff;
 }
 
 .copyright-link {
-    color: var(--gray);
+    color: #ffffff;
     transition: all 0.3s ease;
+    text-decoration: none;
 }
 
 .copyright-link:hover {
-    color: #F9B842;
+    color: #FFD700;
 }
 
 /* ========== BACK TO TOP BUTTON ========== */

@@ -1543,12 +1543,19 @@ body[dir="rtl"] .form-group textarea:valid + label {
     }
     
     .lang-toggle {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+        gap: 0.5rem;
+        min-width: auto;
     }
     
     .lang-toggle span {
-        display: none;
+        display: inline-block;
+        font-size: 0.8rem;
+    }
+    
+    .lang-toggle i {
+        font-size: 0.9rem;
     }
     
     /* Mobile menu overlay */
@@ -1834,18 +1841,22 @@ body[dir="rtl"] .form-group textarea:valid + label {
     }
     
     .lang-toggle {
-        padding: 0.5rem 1rem;
-        font-size: 0.85rem;
-        min-width: 40px;
+        padding: 0.5rem 0.8rem;
+        font-size: 0.75rem;
+        min-width: auto;
         justify-content: center;
+        gap: 0.4rem;
     }
     
     .lang-toggle span {
-        display: none;
+        display: inline-block;
+        font-size: 0.7rem;
+        white-space: nowrap;
     }
     
     .lang-toggle i {
-        font-size: 1rem;
+        font-size: 0.85rem;
+        flex-shrink: 0;
     }
     
     .section-title {
