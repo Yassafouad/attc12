@@ -295,6 +295,22 @@ button {
     padding: var(--spacing-md) 0;
 }
 
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    z-index: 1000;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.logo-divider {
+    width: 2px;
+    height: 40px;
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.2) 50%, transparent 100%);
+    margin: 0 var(--spacing-xs);
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -307,6 +323,10 @@ button {
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
+}
+
+.logo-secondary {
+    padding: var(--spacing-xs);
 }
 
 .logo::before {
@@ -322,6 +342,13 @@ button {
     pointer-events: none;
     -webkit-user-select: none;
     user-select: none;
+}
+
+.logo-secondary-img {
+    height: 55px;
+    width: auto;
+    max-width: 140px;
+    object-fit: contain;
 }
 
 .logo:hover .logo-img {
@@ -510,12 +537,31 @@ button {
         font-size: var(--font-size-lg);
     }
     
+    .logo-container {
+        z-index: 1001;
+        gap: var(--spacing-xs);
+    }
+    
     .logo {
         z-index: 1001;
         pointer-events: auto;
         display: block;
         width: auto;
         min-height: 50px;
+    }
+    
+    .logo-img {
+        height: 40px !important;
+    }
+    
+    .logo-divider {
+        height: 35px;
+        margin: 0 0.5rem;
+    }
+    
+    .logo-secondary-img {
+        height: 45px !important;
+        max-width: 110px;
     }
 }
 
@@ -533,6 +579,44 @@ button {
 @media (max-width: 768px) {
     .hero {
         padding-top: 80px;
+    }
+    
+    .logo-container {
+        gap: 0.5rem;
+    }
+    
+    .logo-img {
+        height: 40px !important;
+    }
+    
+    .logo-divider {
+        height: 30px;
+        margin: 0 0.4rem;
+    }
+    
+    .logo-secondary-img {
+        height: 42px !important;
+        max-width: 110px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-container {
+        gap: 0.3rem;
+    }
+    
+    .logo-img {
+        height: 35px !important;
+    }
+    
+    .logo-divider {
+        height: 25px;
+        margin: 0 0.3rem;
+    }
+    
+    .logo-secondary-img {
+        height: 38px !important;
+        max-width: 95px;
     }
 }
 
