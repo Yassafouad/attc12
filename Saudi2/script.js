@@ -113,6 +113,11 @@ const translations = {
         'footer.appStore': 'حمل من App Store',
         'footer.googlePlay': 'حمل من Google Play',
         'footer.copyright': '© 2025 جميع الحقوق محفوظة | All rights reserved',
+        'culture.discover': 'اكتشف الثقافة',
+        'culture.gallery.title': 'التراث الثقافي لدى اليونسكو',
+        'culture.gallery.subtitle': '',
+        'culture.nav.prev': 'الموقع السابق',
+        'culture.nav.next': 'الموقع التالي',
         'payments.discover': 'اكتشف العملات',
         'payments.gallery.title': 'العملات السعودية',
         'payments.gallery.intro': ''
@@ -230,6 +235,11 @@ const translations = {
         'footer.appStore': 'Download from App Store',
         'footer.googlePlay': 'Download from Google Play',
         'footer.copyright': '© 2025 All rights reserved | جميع الحقوق محفوظة',
+        'culture.discover': 'Discover Culture',
+        'culture.gallery.title': 'UNESCO Cultural Heritage in Saudi Arabia',
+        'culture.gallery.subtitle': '',
+        'culture.nav.prev': 'Previous site',
+        'culture.nav.next': 'Next site',
         'payments.discover': 'Discover the Currency Gallery',
         'payments.gallery.title': 'Saudi Arabian Currencies',
         'payments.gallery.intro': ''
@@ -330,8 +340,77 @@ const paymentsSlides = [
     }
 ];
 
+const cultureSlides = [
+    {
+        title: { ar: 'الحجر (مدائن صالح)', en: 'Hegra (Madain Saleh)' },
+        description: {
+            ar: 'كانت إحدى مدن مملكة الأنباط المهمة في شمال الجزيرة العربية وتضم مقابر ضخمة تعود إلى القرن الأول قبل الميلاد مع نقوش ورسوم صخرية مدهشة.',
+            en: 'Once a thriving Nabataean city in northern Arabia, Hegra features monumental tombs carved in the first century BCE alongside remarkable rock inscriptions and carvings.'
+        },
+        image: 'assets/hgr.png'
+    },
+    {
+        title: { ar: 'حي الطريف في الدرعية', en: 'At-Turaif District, Diriyah' },
+        description: {
+            ar: 'يعود تاريخه إلى القرن الثامن عشر وتحيط به تحصينات طينية على ضفاف وادي حنيفة، وقد كان أول عاصمة لأسرة آل سعود ومركزاً للثقافة النجدية.',
+            en: 'Dating back to the 18th century, At-Turaif is encircled by mudbrick fortifications along Wadi Hanifah and served as the first capital of the House of Saud and a hub of Najdi culture.'
+        },
+        image: 'assets/hy.png'
+    },
+    {
+        title: { ar: 'جدة التاريخية', en: 'Historic Jeddah' },
+        description: {
+            ar: 'تقع في قلب مدينة جدة وتضم مباني تجارية وسكنية تقليدية ومساجد تاريخية تعكس دورها كبوابة للحرمين وكميناء تجاري عبر القرون.',
+            en: 'In the heart of Jeddah, traditional coral-stone houses and historic mosques highlight the city’s role as the gateway to the holy cities and a vibrant seaport through the centuries.'
+        },
+        image: 'assets/gdh.png'
+    },
+    {
+        title: { ar: 'الفنون الصخرية في منطقة حائل', en: 'Rock Art of Hail' },
+        description: {
+            ar: 'تشمل نقوش جبل أم سنمان في جبة والمنجور وراط في الشويمس؛ وتعرض مشاهد لحياة بشرية وحيوانية يعود عمرها لآلاف السنين.',
+            en: 'Rock engravings at Jabal Umm Sinman in Jubbah and at al-Manjor and Raat in Shuwaymis depict human and animal life scenes that date back thousands of years.'
+        },
+        image: 'assets/fnon.png'
+    },
+    {
+        title: { ar: 'واحة الأحساء', en: 'Al-Ahsa Oasis' },
+        description: {
+            ar: 'أكبر واحة نخيل محاطة بالرمال في العالم وتضم مصادر مياه عذبة، ومساجد تاريخية، وقصوراً وأسواقاً تعكس ازدهار المنطقة الزراعي.',
+            en: 'The world’s largest oasis surrounded by desert sands, Al-Ahsa boasts abundant fresh water, historic mosques, forts, and markets that illustrate the region’s agricultural prosperity.'
+        },
+        image: 'assets/whae.png'
+    },
+    {
+        title: { ar: 'منطقة حما الثقافية', en: 'Hima Cultural Area' },
+        description: {
+            ar: 'تضم آلاف النقوش والرسومات الصخرية التي توثق طرق القوافل والحضارات المتعاقبة عبر عصور ما قبل التاريخ حتى العصور الإسلامية المبكرة.',
+            en: 'Hima preserves thousands of inscriptions and rock drawings along ancient caravan routes, recording successive civilizations from prehistory through the early Islamic era.'
+        },
+        image: 'assets/mn.png'
+    },
+    {
+        title: { ar: 'محمية عروق بني معارض', en: 'Uruq Bani Ma’arid Reserve' },
+        description: {
+            ar: 'تقع على أطراف الربع الخالي وتضم كثباناً شاهقة وحياة برية مميزة؛ أعيد فيها توطين المها العربي وغزلان الريم وغزال الجبل.',
+            en: 'On the edge of the Empty Quarter, this reserve protects towering dunes and rich wildlife, including reintroduced Arabian oryx, sand gazelles, and mountain gazelles.'
+        },
+        image: 'assets/mh.png'
+    },
+    {
+        title: { ar: 'المنظر الثقافي لمنطقة الفاو الأثرية', en: 'Cultural Landscape of Al-Faw' },
+        description: {
+            ar: 'كانت عاصمة لمملكة كندة ومركزاً تجارياً مزدهراً يضم مساكن ومخازن وآباراً وأسواقاً ومقابر متعددة الأشكال مع نقوش بالخط الجنوبي المسند.',
+            en: 'Once the capital of the Kindah Kingdom, Al-Faw thrived as a trade hub with residences, warehouses, wells, markets, and varied tombs inscribed in Ancient South Arabian script.'
+        },
+        image: 'assets/th.png'
+    }
+];
+
 let paymentsState = null;
 let paymentsModal = null;
+let cultureState = null;
+let cultureModal = null;
 
 // ===== Current Language =====
 let currentLang = localStorage.getItem('language') || 'ar';
@@ -347,6 +426,9 @@ document.addEventListener('DOMContentLoaded', function() {
     initializePaymentsModal();
     initializePaymentsSlider();
     initializePaymentsDiscoverButtons();
+    initializeCultureModal();
+    initializeCultureSlider();
+    initializeCultureDiscoverButtons();
 });
 
 // ===== CTA Button =====
@@ -403,6 +485,10 @@ function setLanguage(lang) {
 
     if (paymentsState && paymentsState.initialized) {
         refreshPaymentsSliderLanguage();
+    }
+
+    if (cultureState && cultureState.initialized) {
+        refreshCultureSliderLanguage();
     }
 }
 
@@ -655,6 +741,259 @@ function refreshPaymentsSliderLanguage() {
     paymentsState.titleEn.style.display = showArabic ? 'none' : 'block';
 }
 
+// ===== Culture Slider =====
+function initializeCultureSlider() {
+    const modalElement = document.getElementById('culture-modal');
+    const dialog = modalElement ? modalElement.querySelector('.culture-modal-dialog') : null;
+    const slider = document.getElementById('culture-slider');
+    const image = document.getElementById('culture-image');
+    const titleAr = document.getElementById('culture-title-ar');
+    const titleEn = document.getElementById('culture-title-en');
+    const descAr = document.getElementById('culture-desc-ar');
+    const descEn = document.getElementById('culture-desc-en');
+    const indicators = document.getElementById('culture-indicators');
+    const prev = document.getElementById('culture-prev');
+    const next = document.getElementById('culture-next');
+
+    if (!modalElement || !dialog || !slider || !image || !titleAr || !titleEn || !descAr || !descEn || !indicators) {
+        cultureState = null;
+        return;
+    }
+
+    cultureState = {
+        index: 0,
+        modal: modalElement,
+        dialog,
+        slider,
+        image,
+        titleAr,
+        titleEn,
+        descAr,
+        descEn,
+        indicators,
+        prev,
+        next,
+        initialized: false
+    };
+
+    buildCultureIndicators();
+
+    if (cultureState.prev) {
+        cultureState.prev.addEventListener('click', () => changeCultureSlide(-1));
+    }
+
+    if (cultureState.next) {
+        cultureState.next.addEventListener('click', () => changeCultureSlide(1));
+    }
+
+    cultureState.initialized = true;
+    refreshCultureSliderLanguage();
+}
+
+function buildCultureIndicators() {
+    if (!cultureState || !cultureState.indicators) {
+        return;
+    }
+
+    cultureState.indicators.innerHTML = '';
+
+    cultureSlides.forEach((slide, index) => {
+        const indicator = document.createElement('button');
+        indicator.type = 'button';
+        indicator.dataset.index = index;
+        indicator.setAttribute('role', 'tab');
+        indicator.addEventListener('click', () => goToCultureSlide(index));
+        cultureState.indicators.appendChild(indicator);
+    });
+}
+
+function changeCultureSlide(delta) {
+    if (!cultureState) {
+        return;
+    }
+
+    const nextIndex = (cultureState.index + delta + cultureSlides.length) % cultureSlides.length;
+    goToCultureSlide(nextIndex);
+}
+
+function goToCultureSlide(index) {
+    if (!cultureState || !cultureSlides[index]) {
+        return;
+    }
+
+    cultureState.index = index;
+    updateCultureSlideContent();
+}
+
+function updateCultureSlideContent() {
+    if (!cultureState) {
+        return;
+    }
+
+    const slide = cultureSlides[cultureState.index];
+
+    cultureState.image.src = slide.image;
+    cultureState.image.alt = `${slide.title.ar} | ${slide.title.en}`;
+
+    cultureState.titleAr.textContent = slide.title.ar;
+    cultureState.titleEn.textContent = slide.title.en;
+    cultureState.descAr.textContent = slide.description.ar;
+    cultureState.descEn.textContent = slide.description.en;
+
+    updateCultureIndicatorsState();
+    setCultureNavLabels();
+}
+
+function updateCultureIndicatorsState() {
+    if (!cultureState || !cultureState.indicators) {
+        return;
+    }
+
+    const buttons = cultureState.indicators.querySelectorAll('button');
+    buttons.forEach(button => {
+        const idx = Number(button.dataset.index || 0);
+        const isActive = idx === cultureState.index;
+        button.classList.toggle('active', isActive);
+        button.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        button.setAttribute('tabindex', isActive ? '0' : '-1');
+
+        const slide = cultureSlides[idx];
+        if (slide) {
+            const label = currentLang === 'ar' ? slide.title.ar : slide.title.en;
+            button.setAttribute('aria-label', label);
+            button.title = label;
+        }
+    });
+}
+
+function setCultureNavLabels() {
+    if (!cultureState) {
+        return;
+    }
+
+    const prevLabel = translations[currentLang]?.['culture.nav.prev'] || 'Previous';
+    const nextLabel = translations[currentLang]?.['culture.nav.next'] || 'Next';
+
+    if (cultureState.prev) {
+        cultureState.prev.setAttribute('aria-label', prevLabel);
+    }
+
+    if (cultureState.next) {
+        cultureState.next.setAttribute('aria-label', nextLabel);
+    }
+}
+
+function refreshCultureSliderLanguage() {
+    if (!cultureState) {
+        return;
+    }
+
+    updateCultureSlideContent();
+
+    const showArabic = currentLang === 'ar';
+
+    cultureState.titleAr.style.display = showArabic ? 'block' : 'none';
+    cultureState.titleEn.style.display = showArabic ? 'none' : 'block';
+    cultureState.descAr.style.display = showArabic ? 'block' : 'none';
+    cultureState.descEn.style.display = showArabic ? 'none' : 'block';
+}
+
+// ===== Culture Discover Buttons =====
+function initializeCultureDiscoverButtons() {
+    const buttons = document.querySelectorAll('.culture-discover-btn');
+
+    if (!buttons.length) {
+        return;
+    }
+
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            if (!cultureState || !cultureState.modal) {
+                initializeCultureSlider();
+            }
+            openCultureModal();
+        });
+    });
+}
+
+// ===== Culture Modal =====
+function initializeCultureModal() {
+    const modalElement = document.getElementById('culture-modal');
+
+    if (!modalElement) {
+        cultureModal = null;
+        return;
+    }
+
+    const dialog = modalElement.querySelector('.culture-modal-dialog');
+    const closeTriggers = modalElement.querySelectorAll('[data-close="true"]');
+
+    cultureModal = {
+        element: modalElement,
+        dialog,
+        closeTriggers
+    };
+
+    closeTriggers.forEach(trigger => {
+        trigger.addEventListener('click', closeCultureModal);
+    });
+
+    modalElement.addEventListener('click', (event) => {
+        if (event.target === modalElement) {
+            closeCultureModal();
+        }
+    });
+
+    document.addEventListener('keydown', handleCultureModalKeydown);
+}
+
+function handleCultureModalKeydown(event) {
+    if (event.key === 'Escape' && cultureModal && cultureModal.element && cultureModal.element.classList.contains('is-open')) {
+        closeCultureModal();
+    }
+}
+
+function openCultureModal() {
+    if (!cultureModal || !cultureModal.element) {
+        initializeCultureModal();
+    }
+
+    if (!cultureModal || !cultureModal.element) {
+        return;
+    }
+
+    if (!cultureState || !cultureState.modal) {
+        initializeCultureSlider();
+    }
+
+    cultureModal.element.classList.add('is-open');
+    updateBodyModalState();
+
+    if (cultureModal.dialog) {
+        cultureModal.dialog.classList.add('is-highlighted');
+        cultureModal.dialog.setAttribute('tabindex', '-1');
+        cultureModal.dialog.focus({ preventScroll: true });
+        setTimeout(() => {
+            if (cultureModal && cultureModal.dialog) {
+                cultureModal.dialog.classList.remove('is-highlighted');
+            }
+        }, 1200);
+    }
+}
+
+function closeCultureModal() {
+    if (!cultureModal || !cultureModal.element) {
+        return;
+    }
+
+    cultureModal.element.classList.remove('is-open');
+    updateBodyModalState();
+
+    if (cultureModal.dialog) {
+        cultureModal.dialog.classList.remove('is-highlighted');
+    }
+}
+
 // ===== Payments Discover Buttons =====
 function initializePaymentsDiscoverButtons() {
     const buttons = document.querySelectorAll('.payments-discover-btn');
@@ -723,7 +1062,7 @@ function openPaymentsModal() {
     }
 
     paymentsModal.element.classList.add('is-open');
-    document.body.classList.add('modal-open');
+    updateBodyModalState();
 
     if (paymentsModal.dialog) {
         paymentsModal.dialog.classList.add('is-highlighted');
@@ -743,10 +1082,21 @@ function closePaymentsModal() {
     }
 
     paymentsModal.element.classList.remove('is-open');
-    document.body.classList.remove('modal-open');
+    updateBodyModalState();
 
     if (paymentsModal.dialog) {
         paymentsModal.dialog.classList.remove('is-highlighted');
+    }
+}
+
+function updateBodyModalState() {
+    const hasOpenPayments = paymentsModal && paymentsModal.element && paymentsModal.element.classList.contains('is-open');
+    const hasOpenCulture = cultureModal && cultureModal.element && cultureModal.element.classList.contains('is-open');
+
+    if (hasOpenPayments || hasOpenCulture) {
+        document.body.classList.add('modal-open');
+    } else {
+        document.body.classList.remove('modal-open');
     }
 }
 
