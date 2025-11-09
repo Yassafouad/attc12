@@ -5,21 +5,21 @@ const translations = {
         'nav.travel': 'دليل السفر',
         'nav.transport': 'المواصلات',
         'nav.visa': 'التأشيرة',
-        'nav.register': 'التسجيل',
+        'nav.register': 'احصل على التأشيرة',
         'hero.badge': 'اكتشف المملكة',
         'hero.title': 'دليل السفر إلى السعودية',
         'hero.subtitle': '',
         'hero.description': 'افتتحت المملكة العربية السعودية أبوابها للسياحة الترفيهية في عام 2019، لتصبح واحدة من آخر الحدود التي يمكن للمسافرين الشغوفين اكتشافها.',
-        'hero.cta': 'سجّل الآن',
+        'hero.cta': 'احصل على التأشيرة',
         'hero.learn': 'اعرف المزيد',
         'hero.stat1': 'كم من السواحل',
         'hero.stat2': 'أكبر دولة في العالم',
         'hero.stat3': 'دولة مؤهلة للتأشيرة',
         'hero.payment.title': 'طرق دفع آمنة وسريعة',
-        'hero.payment.text': 'ادفع بالبطاقات الدولية، مدى، أو المحافظ الرقمية مثل أبل باي للاستمتاع بتجربة حجز سلسة.',
+        'hero.payment.text': 'ادفع بالبطاقات الدولية أو المحافظ الرقمية مثل أبل باي لتستمتع بتجربة حجز سلسة وآمنة.',
         'about.title': 'حول المملكة العربية السعودية',
         'about.card1.title': 'الثقافة',
-        'about.card1.text': 'تتميز المملكة العربية السعودية بتراث غني وتقاليد عريقة؛ فقد كانت عبر التاريخ مركزًا تجاريًا مهمًا وشهدت ولادة الدين الإسلامي، وتشهد اليوم تحولًا ثقافيًا يوازن بين العادات القديمة وروح العصر الحديث مع مبادرات ثقافية ومهرجانات عالمية تعرّف الزوار على الفنون والموسيقى والمطبخ المحلي.',
+        'about.card1.text': 'تتميز المملكة العربية السعودية بتراث غني وتقاليد عريقة؛ فقد كانت عبر التاريخ مركزًا تجاريًا مهمًا وشهدت ولادة الدين الإسلامي، وتشهد اليوم تحولًا ثقافيًا يوازن بين العادات القديمة وروح العصر الحديث، مع إبراز مواقع مدرجة على قائمة التراث العالمي لليونسكو مثل الحِجر (مدائن صالح) وحي الطريف بالدرعية وواحة الأحساء، إضافة إلى مبادرات ثقافية ومهرجانات عالمية تعرّف الزوار على الفنون والموسيقى.',
         'about.card2.title': 'اللغة',
         'about.card2.text': 'العربية هي اللغة الرسمية المستخدمة في التعاملات اليومية، بينما تُعد الإنجليزية اللغة الثانية غير الرسمية ويتحدث بها شريحة واسعة من السكان؛ وتُعرض لوحات السير، القوائم، والخدمات السياحية باللغتين لضمان تجربة ميسّرة للزوار، مع توفر مترجمين ودلائل بلغات إضافية في أبرز الوجهات.',
         'about.card3.title': 'الآداب العامة',
@@ -112,28 +112,31 @@ const translations = {
         'footer.download': 'حمل التطبيق',
         'footer.appStore': 'حمل من App Store',
         'footer.googlePlay': 'حمل من Google Play',
-        'footer.copyright': '© 2025 جميع الحقوق محفوظة | All rights reserved'
+        'footer.copyright': '© 2025 جميع الحقوق محفوظة | All rights reserved',
+        'payments.discover': 'اكتشف العملات',
+        'payments.gallery.title': 'العملات السعودية',
+        'payments.gallery.intro': ''
     },
     en: {
         'nav.about': 'About',
         'nav.travel': 'Travel Guide',
         'nav.transport': 'Transportation',
         'nav.visa': 'Visa',
-        'nav.register': 'Registration',
+        'nav.register': 'Get Your Visa',
         'hero.badge': 'Discover the Kingdom',
         'hero.title': 'Travel Guide to Saudi Arabia',
         'hero.subtitle': '',
         'hero.description': 'Recently opening its doors to leisure tourism in 2019, the Kingdom of Saudi Arabia has become one of the last frontiers for passionate travelers to discover.',
-        'hero.cta': 'Register Now',
+        'hero.cta': 'Get Your Visa',
         'hero.learn': 'Learn More',
         'hero.stat1': 'km of Coastline',
         'hero.stat2': 'Largest Country in the World',
         'hero.stat3': 'Eligible Countries for Visa',
         'hero.payment.title': 'Secure, Modern Payments',
-        'hero.payment.text': 'Pay effortlessly with international cards, Mada, and digital wallets such as Apple Pay.',
+        'hero.payment.text': 'Pay effortlessly with international cards and digital wallets such as Apple Pay.',
         'about.title': 'About Saudi Arabia',
         'about.card1.title': 'Culture',
-        'about.card1.text': 'Saudi Arabia blends deep-rooted heritage with contemporary creativity: once a pivotal trading hub and the birthplace of Islam, it now showcases art, cuisine, and music through world-class festivals and cultural initiatives.',
+        'about.card1.text': 'Saudi Arabia blends deep-rooted heritage with contemporary creativity, highlighting UNESCO World Heritage sites like Hegra (AlUla), At-Turaif in Diriyah, and Al-Ahsa Oasis, alongside global festivals celebrating art, cuisine, and music.',
         'about.card2.title': 'Language',
         'about.card2.text': 'Arabic is the official language, while English is widely used across tourism services; signage, menus, and visitor information appear in both languages, and multilingual guides are available in major destinations.',
         'about.card3.title': 'Etiquette',
@@ -226,9 +229,109 @@ const translations = {
         'footer.download': 'Download Our App',
         'footer.appStore': 'Download from App Store',
         'footer.googlePlay': 'Download from Google Play',
-        'footer.copyright': '© 2025 All rights reserved | جميع الحقوق محفوظة'
+        'footer.copyright': '© 2025 All rights reserved | جميع الحقوق محفوظة',
+        'payments.discover': 'Discover the Currency Gallery',
+        'payments.gallery.title': 'Saudi Arabian Currencies',
+        'payments.gallery.intro': ''
     }
 };
+
+const paymentsSlides = [
+    {
+        denomination: { ar: '500 ريال سعودي', en: 'SAR 500 Banknote' },
+        images: {
+            front: 'assets/500.png',
+            back: 'assets/5001.png'
+        }
+    },
+    {
+        denomination: { ar: '200 ريال سعودي', en: 'SAR 200 Banknote' },
+        images: {
+            front: 'assets/200.png',
+            back: 'assets/2001.jpg'
+        }
+    },
+    {
+        denomination: { ar: '100 ريال سعودي', en: 'SAR 100 Banknote' },
+        images: {
+            front: 'assets/100.png',
+            back: 'assets/1001.png'
+        }
+    },
+    {
+        denomination: { ar: '50 ريال سعودي', en: 'SAR 50 Banknote' },
+        images: {
+            front: 'assets/50.png',
+            back: 'assets/501.png'
+        }
+    },
+    {
+        denomination: { ar: '10 ريالات سعودية', en: 'SAR 10 Banknote' },
+        images: {
+            front: 'assets/10.png',
+            back: 'assets/101.png'
+        }
+    },
+    {
+        denomination: { ar: '5 ريالات سعودية', en: 'SAR 5 Banknote' },
+        images: {
+            front: 'assets/5.png',
+            back: 'assets/51.png'
+        }
+    },
+    {
+        denomination: { ar: 'ريالان', en: 'SAR 2 Coin' },
+        images: {
+            front: 'assets/2.png',
+            back: 'assets/2r.png'
+        }
+    },
+    {
+        denomination: { ar: 'ريال واحد', en: 'SAR 1 Coin' },
+        images: {
+            front: 'assets/1r.png',
+            back: 'assets/1rr.png'
+        }
+    },
+    {
+        denomination: { ar: 'خمسون هللة', en: '50 Halala Coin' },
+        images: {
+            front: 'assets/50r.png',
+            back: 'assets/50rr.png'
+        }
+    },
+    {
+        denomination: { ar: 'خمس وعشرون هللة', en: '25 Halala Coin' },
+        images: {
+            front: 'assets/25r.png',
+            back: 'assets/25rr.png'
+        }
+    },
+    {
+        denomination: { ar: 'عشر هللات', en: '10 Halala Coin' },
+        images: {
+            front: 'assets/10r.png',
+            back: 'assets/10rr.png'
+        }
+    },
+    {
+        denomination: { ar: 'خمس هللات', en: '5 Halala Coin' },
+        images: {
+            front: 'assets/5r.png',
+            back: 'assets/5rr.png'
+        }
+    },
+    {
+        denomination: { ar: 'هللة واحدة', en: '1 Halala Coin' },
+        images: {
+            front: 'assets/1r.png',
+            back: 'assets/1rr.png'
+        }
+    }
+];
+
+let paymentsState = null;
+let paymentsModal = null;
 
 // ===== Current Language =====
 let currentLang = localStorage.getItem('language') || 'ar';
@@ -241,6 +344,9 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeScrollAnimations();
     initializeSmoothScroll();
     initializeCTA();
+    initializePaymentsModal();
+    initializePaymentsSlider();
+    initializePaymentsDiscoverButtons();
 });
 
 // ===== CTA Button =====
@@ -294,6 +400,10 @@ function setLanguage(lang) {
             btn.classList.add('active');
         }
     });
+
+    if (paymentsState && paymentsState.initialized) {
+        refreshPaymentsSliderLanguage();
+    }
 }
 
 // ===== Navigation Functions =====
@@ -391,6 +501,253 @@ function initializeScrollAnimations() {
         el.classList.add('fade-in');
         observer.observe(el);
     });
+}
+
+// ===== Payments Slider =====
+function initializePaymentsSlider() {
+    const modalElement = document.getElementById('payments-modal');
+    const dialog = modalElement ? modalElement.querySelector('.payments-modal-dialog') : null;
+    const slider = document.getElementById('payments-slider');
+    const frontImage = document.getElementById('payments-image-front');
+    const backImage = document.getElementById('payments-image-back');
+    const titleAr = document.getElementById('payments-title-ar');
+    const titleEn = document.getElementById('payments-title-en');
+    const indicators = document.getElementById('payments-indicators');
+    const prev = document.getElementById('payments-prev');
+    const next = document.getElementById('payments-next');
+
+    if (!modalElement || !dialog || !slider || !frontImage || !backImage || !titleAr || !titleEn || !indicators) {
+        paymentsState = null;
+        return;
+    }
+
+    paymentsState = {
+        index: 0,
+        modal: modalElement,
+        dialog,
+        slider,
+        frontImage,
+        backImage,
+        titleAr,
+        titleEn,
+        indicators,
+        prev,
+        next,
+        initialized: false
+    };
+
+    buildPaymentsIndicators();
+
+    if (paymentsState.prev) {
+        paymentsState.prev.addEventListener('click', () => changePaymentsSlide(-1));
+    }
+    if (paymentsState.next) {
+        paymentsState.next.addEventListener('click', () => changePaymentsSlide(1));
+    }
+
+    paymentsState.initialized = true;
+    refreshPaymentsSliderLanguage();
+}
+
+function buildPaymentsIndicators() {
+    if (!paymentsState || !paymentsState.indicators) {
+        return;
+    }
+
+    paymentsState.indicators.innerHTML = '';
+
+    paymentsSlides.forEach((slide, index) => {
+        const indicator = document.createElement('button');
+        indicator.type = 'button';
+        indicator.dataset.index = index;
+        indicator.setAttribute('role', 'tab');
+        indicator.addEventListener('click', () => goToPaymentsSlide(index));
+        paymentsState.indicators.appendChild(indicator);
+    });
+}
+
+function changePaymentsSlide(delta) {
+    if (!paymentsState) {
+        return;
+    }
+
+    const nextIndex = (paymentsState.index + delta + paymentsSlides.length) % paymentsSlides.length;
+    goToPaymentsSlide(nextIndex);
+}
+
+function goToPaymentsSlide(index) {
+    if (!paymentsState || !paymentsSlides[index]) {
+        return;
+    }
+
+    paymentsState.index = index;
+    updatePaymentsSlideContent();
+}
+
+function updatePaymentsSlideContent() {
+    if (!paymentsState) {
+        return;
+    }
+
+    const slide = paymentsSlides[paymentsState.index];
+
+    paymentsState.frontImage.src = slide.images.front;
+    paymentsState.backImage.src = slide.images.back;
+
+    const frontAlt = `${slide.denomination.ar} - الوجه | ${slide.denomination.en} - Front`;
+    const backAlt = `${slide.denomination.ar} - الخلف | ${slide.denomination.en} - Back`;
+
+    paymentsState.frontImage.alt = frontAlt;
+    paymentsState.backImage.alt = backAlt;
+
+    paymentsState.titleAr.textContent = slide.denomination.ar;
+    paymentsState.titleEn.textContent = slide.denomination.en;
+
+    updatePaymentsIndicatorsState();
+    setPaymentsNavLabels();
+}
+
+function updatePaymentsIndicatorsState() {
+    if (!paymentsState || !paymentsState.indicators) {
+        return;
+    }
+
+    const buttons = paymentsState.indicators.querySelectorAll('button');
+    buttons.forEach(button => {
+        const idx = Number(button.dataset.index || 0);
+        const isActive = idx === paymentsState.index;
+        button.classList.toggle('active', isActive);
+        button.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        button.setAttribute('tabindex', isActive ? '0' : '-1');
+
+        const slide = paymentsSlides[idx];
+        if (slide) {
+            const label = currentLang === 'ar' ? slide.denomination.ar : slide.denomination.en;
+            button.setAttribute('aria-label', label);
+            button.title = label;
+        }
+    });
+}
+
+function setPaymentsNavLabels() {
+    if (!paymentsState) {
+        return;
+    }
+
+    if (paymentsState.prev) {
+        paymentsState.prev.setAttribute('aria-label', currentLang === 'ar' ? 'العملة السابقة' : 'Previous banknote');
+    }
+    if (paymentsState.next) {
+        paymentsState.next.setAttribute('aria-label', currentLang === 'ar' ? 'العملة التالية' : 'Next banknote');
+    }
+}
+
+function refreshPaymentsSliderLanguage() {
+    if (!paymentsState) {
+        return;
+    }
+
+    updatePaymentsSlideContent();
+
+    const showArabic = currentLang === 'ar';
+
+    paymentsState.titleAr.style.display = showArabic ? 'block' : 'none';
+    paymentsState.titleEn.style.display = showArabic ? 'none' : 'block';
+}
+
+// ===== Payments Discover Buttons =====
+function initializePaymentsDiscoverButtons() {
+    const buttons = document.querySelectorAll('.payments-discover-btn');
+
+    if (!buttons.length) {
+        return;
+    }
+
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            if (!paymentsState || !paymentsState.modal) {
+                initializePaymentsSlider();
+            }
+            openPaymentsModal();
+        });
+    });
+}
+
+function initializePaymentsModal() {
+    const modalElement = document.getElementById('payments-modal');
+
+    if (!modalElement) {
+        paymentsModal = null;
+        return;
+    }
+
+    const dialog = modalElement.querySelector('.payments-modal-dialog');
+    const closeTriggers = modalElement.querySelectorAll('[data-close="true"]');
+
+    paymentsModal = {
+        element: modalElement,
+        dialog,
+        closeTriggers
+    };
+
+    closeTriggers.forEach(trigger => {
+        trigger.addEventListener('click', closePaymentsModal);
+    });
+
+    modalElement.addEventListener('click', (event) => {
+        if (event.target === modalElement) {
+            closePaymentsModal();
+        }
+    });
+
+    document.addEventListener('keydown', handlePaymentsModalKeydown);
+}
+
+function handlePaymentsModalKeydown(event) {
+    if (event.key === 'Escape' && paymentsModal && paymentsModal.element && paymentsModal.element.classList.contains('is-open')) {
+        closePaymentsModal();
+    }
+}
+
+function openPaymentsModal() {
+    if (!paymentsModal || !paymentsModal.element) {
+        initializePaymentsModal();
+    }
+
+    if (!paymentsModal || !paymentsModal.element) {
+        return;
+    }
+
+    if (!paymentsState || !paymentsState.modal) {
+        initializePaymentsSlider();
+    }
+
+    paymentsModal.element.classList.add('is-open');
+    document.body.classList.add('modal-open');
+
+    if (paymentsModal.dialog) {
+        paymentsModal.dialog.classList.add('is-highlighted');
+        paymentsModal.dialog.setAttribute('tabindex', '-1');
+        paymentsModal.dialog.focus({ preventScroll: true });
+        setTimeout(() => {
+            if (paymentsModal && paymentsModal.dialog) {
+                paymentsModal.dialog.classList.remove('is-highlighted');
+            }
+        }, 1200);
+    }
+}
+
+function closePaymentsModal() {
+    if (!paymentsModal || !paymentsModal.element) {
+        return;
+    }
+
+    paymentsModal.element.classList.remove('is-open');
+    document.body.classList.remove('modal-open');
+
+    if (paymentsModal.dialog) {
+        paymentsModal.dialog.classList.remove('is-highlighted');
+    }
 }
 
 // ===== Form Placeholder (for when Zoho form is added) =====
